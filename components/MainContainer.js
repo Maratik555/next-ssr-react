@@ -1,5 +1,6 @@
 import A from './A'
 import Head from 'next/head'
+import Footer from './Footer'
 
 const MainContainer = ({children, keywords}) => {
   return (
@@ -9,19 +10,28 @@ const MainContainer = ({children, keywords}) => {
         <title>Главная страница</title>
       </Head>
       <div className="navbar">
-        <A href={'/'} text="Главная"/>
-        <A href={'/users'} text="Пользователи"/>
+        <A href={'/'} text="Главная" />
+        <A href={'/posts'} text="Посты"/>
+        <A href={'/todos'} text="Todos"/>
       </div>
       <div>
         {children}
       </div>
+      <Footer />
       <style jsx>
         {`
           .navbar {
-            background: orange;
-            padding: 15px;
+          display: flex;
+           min-height: 80px;
+          justify-content: space-around;
+          align-items: center;
+          background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5)
+  );
+          padding: 10px;
           }
-
         `}
       </style>
     </>

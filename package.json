@@ -4,17 +4,26 @@
   "description": "app next js",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start"
   },
-  "keywords": ["next","js","react"],
+  "keywords": [
+    "next",
+    "js",
+    "react"
+  ],
   "author": "Marat",
   "license": "ISC",
   "dependencies": {
     "next": "^10.0.4",
+    "nextjs-progressbar": "^0.0.14",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "sass": "^1.32.0"
+    "sass": "^1.32.0",
+    "sharp": "^0.30.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.9"
   }
 }
